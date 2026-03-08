@@ -13,4 +13,8 @@ jobs:
 
       - name: Run deploy script
         working-directory: my_snowflake_project
-        run: ./deploy.sh dev
+        run: |
+          ENV=${{ github.ref_name }}
+          [ "$ENV" = "main" ] && ENV=dev
+          echo "Deploying to environment: $ENV"
+          run: ./deploy.sh $ENV
