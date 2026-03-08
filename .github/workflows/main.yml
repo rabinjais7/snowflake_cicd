@@ -14,6 +14,7 @@ jobs:
       - name: Run deploy script
         working-directory: my_snowflake_project
         run: |
+          source /home/rabinjais7/python_projects/snowflake_cicd/.venv/bin/activate
           ENV=${{ github.ref_name }}
           [ "$ENV" = "main" ] && ENV=dev
           echo "Deploying to environment: $ENV"
