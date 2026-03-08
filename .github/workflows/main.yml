@@ -18,4 +18,4 @@ jobs:
           ENV=${{ github.ref_name }}
           [ "$ENV" = "main" ] && ENV=dev
           echo "Deploying to environment: $ENV"
-          run: ./deploy.sh $ENV
+          ./deploy.sh $ENV
