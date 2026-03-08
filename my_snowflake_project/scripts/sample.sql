@@ -1,0 +1,1 @@
+-- this folder scripts contains grants etc related queries

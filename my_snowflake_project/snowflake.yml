@@ -1,0 +1,14 @@
+definition_version: 1
+
+deploy:
+  - name: tables
+    sql: tables/**/*.sql
+
+  - name: views
+    sql: views/**/*.sql
+
+  - name: stored_procedures
+    sql: sps/**/*.sql
+
+  - name: scripts
+    sql: sqls/**/*.sql
